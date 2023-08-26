@@ -23,7 +23,14 @@ Secondly, it enables us to test the cases for invalid scenarios when an API woul
 
 ## We can accomplish our goal in four steps:
 
-1\. Create a mock server. 2. Set up mock requests and corresponding responses according to API rules. 3. Write test cases in Postman that will run with each execution. 4. Execute the request with changes in payload and verify test results.
+1. Create a mock server.
+    
+2. Set up mock requests and corresponding responses according to API rules.
+    
+3. Write test cases in Postman that will run with each execution.
+    
+4. Execute the request with changes in payload and verify test results.
+    
 
 ## Create a Mock Server.
 
@@ -33,13 +40,31 @@ The Postman documentation provides a comprehensive guide for [setting up mock se
 
 We will create a mock example of an API that returns the shipping fee for a customer based on the total amount of cart items and the type of active subscriptions held by the customer. The rules are as follows:
 
-1\. There are two allowed shipping methods: 'standard' and 'prime'. 2. No shipping fee is charged when the customer has an active membership, regardless of the shipping method and cart amount. 3. If the selected shipping method is 'standard', the cart amount is less than $35, and the membership is inactive, the customer is charged a $6.99 shipping fee. 4. If the selected shipping method is 'prime' and the membership is inactive, the customer is charged a $13.99 shipping fee, regardless of the cart amount.
+1. Allow two shipping methods: 'standard' and 'prime'.
+    
+2. Charge no shipping fee for customers with active memberships, irrespective of shipping method and cart amount.
+    
+3. Charge a $6.99 shipping fee for 'standard' shipping method, cart amount less than $35, and inactive membership.
+    
+4. Charge a $13.99 shipping fee for 'prime' shipping method and inactive membership, regardless of cart amount.
+    
 
 ### Valid Test Scenarios
 
 Based on the rules specified above, there are certain test cases (TCs) that we can automate using Postman. Some of them are listed below:
 
-1\. Selected shipping method is 'standard', the amount is less than $35, and membership is active. 2. Selected shipping method is 'standard', the amount is less than $35, and membership is inactive. 3. Selected shipping method is 'standard', the amount is greater than or equal to $35, and membership is active. 4. Selected shipping method is 'standard', the amount is greater than or equal to $35, and membership is inactive. 5. Selected shipping method is 'prime', the amount is less than $35, and membership is active. 6. Selected shipping method is 'prime', the amount is less than $35, and membership is inactive.
+1. Shipping method: 'standard', cart amount: &lt;$35, membership: active.
+    
+2. Shipping method: 'standard', cart amount: &lt;$35, membership: inactive.
+    
+3. Shipping method: 'standard', cart amount: &gt;=$35, membership: active.
+    
+4. Shipping method: 'standard', cart amount: &gt;=$35, membership: inactive.
+    
+5. Shipping method: 'prime', cart amount: &lt;$35, membership: active.
+    
+6. Shipping method: 'prime', cart amount: &lt;$35, membership: inactive.
+    
 
 Let's examine the first example. The left panel displays the expected request payload, while the right panel presents the anticipated response code and response body. If the chosen shipping method is standard shipping, the cart amount is less than $35, and the customer has an active membership, no shipping fee will be applied. Essentially, we are instructing the server to return the response on the right side when it receives the request payload on the left side.
 
