@@ -1,10 +1,10 @@
 ---
-title: "Mastering Mock Servers in Postman: A Step-by-Step Guide"
-seoTitle: "Master Postman Mock Servers: Step-by-Step Guide"
+title: "Setting up Mock Servers in Postman: A Step-by-Step Guide"
+seoTitle: "Postman Mock Servers Setup: Step-by-Step Guide"
 seoDescription: "Master Postman's Mock Servers with this step-by-step guide: create, configure, and test API responses for various scenarios to streamline development"
 datePublished: Sat Aug 26 2023 19:51:13 GMT+0000 (Coordinated Universal Time)
 cuid: cllsfsyki000c09laar1p4ebr
-slug: mastering-mock-servers-in-postman-a-step-by-step-guide
+slug: setting-up-mock-servers-in-postman-a-step-by-step-guide
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/FPK6K5OUFVA/upload/791978ba30159586cbd0aedb26479318.jpeg
 tags: postman, mock-server, postman-mock-server
 
